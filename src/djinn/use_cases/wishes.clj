@@ -4,3 +4,4 @@
     (if (valid? wish)
       {:code :success :wish wish}
       {:code :error :errors (validate wish)}))
+

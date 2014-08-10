@@ -28,3 +28,4 @@
 
     (it "returns error information"
       (should-not-be nil? (:errors (create invalid-wish))))))
+

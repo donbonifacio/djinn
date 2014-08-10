@@ -15,3 +15,4 @@
                                  :new     "observations"
                                  labels   requests)])
     (should-not-be nil? (:type (validate invalid-type-wish)))))
+
