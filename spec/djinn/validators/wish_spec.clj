@@ -8,11 +8,10 @@
 
   (with labels ["dashboard" "invoicing"])
   (with requests { :user-voice 2 :desk 3 })
-  (with invalid-type-wish )
 
   (it "adds a type error"
     (let [invalid-type-wish (Wish. :invalid "description"
-                                 :new     "observations"
-                                 labels   requests)])
-    (should-not-be nil? (:type (validate invalid-type-wish)))))
+                                   :new     "observations"
+                                   labels   requests)]
+      (should-not-be nil? (:type (validate invalid-type-wish))))))
 
