@@ -4,8 +4,8 @@
             [djinn.data-types.wish :refer :all])
   (:import [djinn.data_types.wish Wish]))
 
-
 (describe "create"
+
   (with labels ["dashboard" "invoicing"])
   (with requests { :user-voice 2 :desk 3 })
   (with wish (Wish. :improvement "a description"
