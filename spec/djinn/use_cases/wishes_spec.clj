@@ -12,7 +12,7 @@
                     :new         "observations"
                     labels         requests))
 
-  (it "returns success information"
+  (it "returns success code"
     (should= :success (:code (create @wish))))
 
   (it "returns the newly created wish"
@@ -23,5 +23,8 @@
                                    :new     "observations"
                                    labels   requests))
 
+    (it "returns error code"
+      (should= :error (:code (create invalid-wish))))
+
     (it "returns error information"
-      (should= :error (:code (create invalid-wish))))))
+      (should-not-be nil? (:errors (create invalid-wish))))))

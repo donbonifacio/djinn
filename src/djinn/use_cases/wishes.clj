@@ -3,4 +3,4 @@
   (defn create [wish]
     (if (valid? wish)
       {:code :success :wish wish}
-      {:code :error}))
+      {:code :error :errors (validate wish)}))
