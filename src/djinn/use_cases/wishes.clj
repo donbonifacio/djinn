@@ -1,3 +1,6 @@
-(ns djinn.use-cases.wishes)
+(ns djinn.use-cases.wishes
+  (:require [djinn.validators.wish :refer :all]))
   (defn create [wish]
-    {:code :success})
+    (if (valid? wish)
+      {:code :success :wish wish}
+      {:code :error}))
